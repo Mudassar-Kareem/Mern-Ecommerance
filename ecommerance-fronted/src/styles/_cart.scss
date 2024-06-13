@@ -1,0 +1,100 @@
+.cart{
+    padding: 2rem 4rem;
+    height: calc(100vh - 4rem);
+    @include flex(row,unset,unset,4rem);
+    >aside{
+        width: 30%;
+        @include flex (column,center,stretch,1.5rem);
+        padding: 4rem;
+        >input{
+            padding: 1rem;
+            border: 1px solid rgba(0, 0, 0, 0.28);
+            border-radius: 5px;
+            outline: none;
+        }
+        >p{
+            font-size: 1.2rem;
+        }
+        >a{
+            color: white;
+            background-color: rgb(0,104,136);
+            padding: 1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 5px;
+            @include flex;
+            &:hover{
+                transition: all 0.5s;
+                opacity: 0.7;
+            }
+        }
+        >span{
+            margin-top: -1rem;
+            @include flex(row,center,center,0.10rem);
+            >code{
+                font-weight: 900;
+                align-self: flex-end;
+            }
+        }
+    }
+    >main{
+        width: 70%;
+        overflow-y: auto;
+        >h1{
+            @include heading(2px);
+            text-align: center;
+        }
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
+    
+}
+.cartitem{
+    padding: 1rem;
+    @include flex(row,flex-start,center,3rem);
+    >img{
+        @include square(10rem);
+        object-fit: contain;
+    }
+    >article{
+        @include flex(column,center,flex-start,0.25rem);
+        >a{
+            font-size: 1.2rem;
+            color: rgb(46,36,46);
+            &:hover{
+                color:  rgb(0,104,136);
+            }
+        }
+        >span{
+            font-weight: 700;
+        }
+    }
+    >div{
+        @include flex;
+        margin-left: auto;
+        >button{
+            @include square(2rem);
+            @include flex;
+            border-radius: 5px;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            &:hover{
+                background-color: rgb(0,104,136);
+                color: white;
+            }
+        }
+    }
+    >button{
+        font-size: 1.2rem;
+        border: none;
+        @include flex;
+        background-color: transparent;
+        cursor: pointer;
+        &:hover{
+            color: red;
+        }
+    }
+}

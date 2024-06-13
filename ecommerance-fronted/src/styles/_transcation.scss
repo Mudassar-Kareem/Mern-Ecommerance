@@ -1,0 +1,6 @@
+.transcationtable{
+    background-color: white;
+    @include square(100%);
+    padding: 2rem;
+    overflow: auto;
+}

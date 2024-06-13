@@ -1,0 +1,6 @@
+.customerstable{
+    @include square(100%);
+    background: white;
+    padding: 2rem;
+    overflow: auto;
+}

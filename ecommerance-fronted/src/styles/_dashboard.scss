@@ -1,0 +1,156 @@
+.dashboard{
+    overflow-y: auto;
+    .bar{
+        height: 4rem;
+        @include flex(row,unset);
+        padding: 0 1rem;
+        border-bottom: 1px solid rgba(0,0,0,0.37);
+        >input{
+            margin-right: auto;
+            @include inputStyle(100%, 1rem 0);
+        } >svg{
+            font-size: 1.2rem;
+            opacity: 0.7;
+        } >img{
+            @include square(2rem);
+            border-radius: 50%;
+        }
+    }
+    .wedgetcontainer{
+        @include flex(row,space-between,stretch,2rem);
+        padding: 2rem 2rem 2rem 0;
+    
+    .widgetitem{
+        width: 16rem;
+        background-color: #fff;
+        padding: 2rem;
+        box-shadow: 0 0 10px rgba(0,0,0,0.132);
+        @include flex(row,space-between,stretch,0);
+        .witgetinfo{
+            >p{
+                font-size: 0.8rem; opacity: 0.7;
+            }
+            >h4{
+                font-size: 1.5rem;
+            }
+            >span{
+                @include flex(row,unset,center,0.2rem)
+            } 
+        }
+        .widgetcircle{
+            position: relative;
+            @include square(5rem);
+            background-color: #aa1616;
+            border-radius: 50%;
+            place-items: center;
+            display: grid;
+            &::before{
+                content: '';
+                position: absolute;
+                @include square(4rem);
+                background-color: #fff;
+                border-radius: 100%;  
+            }
+            >span{
+               position: relative;
+            }
+        }
+
+    }
+ } 
+ .graphcontainer{
+    @include flex(row,unset,unset,2rem);
+    padding: 0 2rem 2rem 0;
+    >div{
+        background-color: #fff;
+        border-radius: 10px;
+    } 
+    .revenuechart{
+        width: 100%;
+        padding: 1rem 3rem;
+        >h2{
+            @include heading;
+            text-align: center;
+            margin: 1rem 0 2.5rem 0.25rem;
+        }
+    }
+    .dashcat{
+        width: 100%;
+        max-width: 16rem;
+        padding-bottom: 2rem;
+        @include flex(column,center,unset,0);
+        >h2{
+            @include heading;
+            text-align: center;
+            margin: 1rem 0 2.5rem 0.25rem;
+        }
+        >div{
+            overflow-y: auto;
+            padding-left: 0.5rem;
+        }
+        .cartitem{
+            width: 100%;
+            @include flex(row,space-between);
+            padding: 1rem;
+            >h4{
+                letter-spacing: 1px; font-weight: 300;
+            }
+            >div{
+                width: 6rem;
+                height: 0.5rem;
+                background:rgb(217,217,217);
+                border-radius: 20px;
+                margin-left: auto;
+                flex: none;
+                >div{
+                    height: 100%;
+                    border-radius: 20px;
+                }
+            }
+            >span{
+                font-size: 0.8rem;
+                font-weight: 700;
+            }
+        }
+    }
+ }
+
+ .tcontainer{
+    display: flex;
+    gap: 2rem;
+    height: 30rem;
+    padding: 0 2rem 2rem 0;
+    >div{
+        background-color: #fff;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.132);
+        border-radius: 10px;
+    }
+    .transcationbox{
+        width: 100%;
+        padding: 1rem;
+        overflow-x: auto;
+        >h2{
+            @include heading;
+            text-align: center;
+            margin: 1.5rem 0 0 0;
+        }
+    }
+    .tchart{
+        width: 100%;
+        max-width: 20rem;
+        padding: 1rem;
+        position: relative;
+        >h2{
+            @include heading;
+            text-align: center;
+            margin: 1rem 0 2.5rem 0.25rem;
+        }
+        >p{
+            @include posCenter;
+            font-size: 2rem;
+            color: rgba(0,0,0,0.646);
+        }
+    }
+    
+ }
+}

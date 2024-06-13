@@ -1,0 +1,77 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem 5%;
+    height: calc(100% - 4rem);
+    >section{
+        width: 100%;
+        height: 19rem;
+        background: url(../assets/cover.jpg) no-repeat center / cover;
+        margin: auto;
+    }
+    h1{
+        @include flex(row,space-between,center);
+        @include heading(1px);
+        margin-top: 3rem;
+    }
+    >main{
+        width: 100%;
+        flex: 1;
+        overflow-x: auto;
+        padding: 1rem;
+        display: flex;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        
+    }
+}
+.productcard{
+    width: 17rem;
+    height: 18.75rem;
+    position: relative;
+    @include flex(column,flex-start,center,4px);
+    padding: 1rem;
+    flex: none;
+    background: white;
+    &:hover{
+        div{
+            opacity: 1;
+        }
+    }
+    >img{
+        @include square(calc(18.75rem - 3rem));
+        object-fit: cover;
+        margin: 1rem;
+    }
+    span {
+        font-weight: 700;
+        font-size: 1.1rem;
+  }
+  >div{
+    transition: all 0.5s;
+    opacity: 0;
+    @include square(100%);
+    background-color:#0000006b;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include flex;
+    >button{
+       cursor: pointer;
+       font-size: 1.1rem;
+        @include square(3rem);
+        background-color: rgb(0,104,136);
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        color: white;
+        transition: all 0.3s;
+        &:hover{
+            rotate: 20deg;
+        }
+    }
+  }
+}
+
